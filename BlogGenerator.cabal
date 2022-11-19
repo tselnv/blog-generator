@@ -24,8 +24,8 @@ source-repository head
 
 library
   exposed-modules:
-      Hello
-      Html
+      Domain.Html.Hello
+      Domain.Html.Html
       Lib
   other-modules:
       Paths_BlogGenerator

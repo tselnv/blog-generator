@@ -1,9 +1,6 @@
-{-# LANGUAGE OverloadedStrings #-}
-{-# LANGUAGE ImportQualifiedPost #-}
+module Domain.Html.Hello (main) where
 
-module Hello where
-
-import Html
+import Domain.Html.Html
 
 import Data.Text (Text)
 import Data.Text qualified as Text
@@ -13,7 +10,7 @@ main :: IO ()
 main = do
     let html = render myhtml
     putStrLn (Text.unpack html)
-    Text.writeFile ".html.html" html
+    Text.writeFile ".hello.html" html
 
 myhtml :: Html Text
 myhtml =

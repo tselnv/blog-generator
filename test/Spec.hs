@@ -1,6 +1,6 @@
 {-# LANGUAGE ImportQualifiedPost #-}
 
-import Hello qualified
+import Domain.Html.Hello qualified as Hello
 
 main :: IO ()
 main = Hello.main

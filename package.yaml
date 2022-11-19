@@ -37,7 +37,8 @@ ghc-options:
 - -Wredundant-constraints
 
 library:
-  source-dirs: src
+  source-dirs: 
+    - src
   default-extensions:   ImportQualifiedPost
                       , OverloadedStrings 
 

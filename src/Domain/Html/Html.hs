@@ -1,9 +1,9 @@
-{-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE ConstrainedClassMethods #-}
 
-module Html (Html, Title, Structure, html_, p_, h1_, append_, render) where
+module Domain.Html.Html (Html, Title, Structure, html_, p_, h1_, append_, render) where
 
 import Data.Text (Text)
+import Data.Text qualified as Text
 import Data.String (IsString(..))
 
 newtype Html a = Html a
@@ -85,6 +85,21 @@ instance WrapHtml Text where
   showTag TagP = "p"
   showTag TagH1 = "h1"
 
+class Escapable a where
+  escape :: a -> a
+
+instance Escapable Text where
+  escape = Text.pack . concatMap escapeChar . Text.unpack
+    where
+      escapeChar c =
+        case c of
+          '<' -> "&lt;"
+          '>' -> "&gt;"
+          '&' -> "&amp;"
+          '"' -> "&quot;"
+          '\'' -> "&#39;"
+          _ -> [c]
+    
   
 render :: Html a -> a
 render (Html a) = a
