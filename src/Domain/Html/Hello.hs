@@ -1,3 +1,4 @@
+{-# LANGUAGE DataKinds #-}
 module Domain.Html.Hello (main) where
 
 import Domain.Html.Html
@@ -14,7 +15,7 @@ main = do
     putStrLn (Text.unpack html)
     Text.writeFile ".hello.html" html
 
-myhtml :: String -> Html Text
+myhtml :: String -> Html Escaped Text
 myhtml time =
   html_
     "My title"
