@@ -15,7 +15,7 @@ main = do
     putStrLn (Text.unpack html)
     Text.writeFile ".hello.html" html
 
-myhtml :: String -> Html Escaped Text
+myhtml :: String -> Html Text
 myhtml time =
   html_
     "My title"
