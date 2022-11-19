@@ -1,2 +1,6 @@
+{-# LANGUAGE ImportQualifiedPost #-}
+
+import Hello qualified
+
 main :: IO ()
-main = putStrLn "Test suite not yet implemented"
+main = Hello.main

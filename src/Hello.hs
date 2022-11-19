@@ -13,7 +13,7 @@ main :: IO ()
 main = do
     let html = render myhtml
     putStrLn (Text.unpack html)
-    Text.writeFile "html.html" html
+    Text.writeFile ".html.html" html
 
 myhtml :: Html Text
 myhtml =
