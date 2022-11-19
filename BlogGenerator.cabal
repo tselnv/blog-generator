@@ -27,6 +27,7 @@ library
       Domain.Html.Hello
       Domain.Html.Html
       Domain.Html.HtmlInternal
+      Domain.Html.HtmlTextInternal
       Lib
   other-modules:
       Paths_BlogGenerator
