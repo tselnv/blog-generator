@@ -28,6 +28,8 @@ library
       Domain.Html.Html
       Domain.Html.HtmlInternal
       Domain.Html.HtmlTextInternal
+      Domain.Markup.Markup
+      Domain.Markup.MarkupString
       Lib
   other-modules:
       Paths_BlogGenerator

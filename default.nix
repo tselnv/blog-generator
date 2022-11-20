@@ -22,13 +22,11 @@ in
       compiler.cabal-install
       compiler.ghcid
       compiler.haskell-language-server
-      # (happy9 compiler)
-      # Used by bin/generated
       compiler.ghcide
       pkgs.ormolu
       pkgs.hpack
       compiler.ghc
-      pkgs.haskellPackages.record-dot-preprocessor
+      # pkgs.haskellPackages.record-dot-preprocessor
     ];
 
 }
